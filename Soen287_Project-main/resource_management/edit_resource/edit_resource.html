@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Resource</title>
+  <link rel="stylesheet" href="../shared_resource.css">
+  <script src="./edit_resource.js" type="module"></script>
+  <script src="../../adminSafety.js" type="module"></script>
+</head>
+
+<body>
+  <div id="headerBanner">
+    <h1>Campus Resource Management</h1>
+        <span>Concordia University</span>
+  </div> 
+  <a href="../main_page/resource_management.html?currentCategory=All" class="btn-home">Back to Resource Management</a>
+  
+  <section class="container card">
+    <h1>Edit Resource</h1>
+
+    <div id="editForm" style="display:none; margin-top:20px;">
+      <h3>Edit Resource Details</h3>
+
+    <form class="form-container">
+      <div>
+        <label>Name:</label>
+        <input type="text" id="newName">
+      </div>
+
+      <div>
+        <label for="myDropdown">Type:</label>
+        <select id="newType" name="myDropdown">
+            <option value="room">Room</option>
+            <option value="equipment">Equipment</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Description:</label>
+        <textarea id="newDescription" rows="3" cols="40"></textarea>
+      </div>
+
+      <div>
+          <label for="location">Location :</label>
+          <input type="location" id="newLocation" name="location">
+      </div>
+
+      <div id="capacityDisplay">
+        <label>Capacity:</label>
+        <input type="text" id="newCapacity">
+      </div>
+
+      <div>
+        <label for="myDropdown">Resource Status:</label>
+          <select id="newAvailability" name="myDropdown">
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unavailable</option>
+          </select>
+      </div>
+
+      <div>
+        <label>Image URL:</label>
+        <input type="text" id="newImage">
+      </div>
+
+      <button class="btn" type="button" id="saveBtn">Save Changes</button>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>

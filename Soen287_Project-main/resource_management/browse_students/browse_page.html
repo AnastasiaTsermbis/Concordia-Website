@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Browse resources</title>
+    <link rel="stylesheet" href="../shared_resource.css">
+    <!-- <script src="./browse_page.js" type="module"></script>  -->
+    <script src="../main_page/resource_management.js" type="module"></script>
+   
+<body>
+    <div id="headerBanner">
+        <h1>Campus Resource System</h1>
+        <span>Concordia University</span>
+    </div>  
+    <a href="../../dashboard_notifications/student_dashboard.html" class="btn-home">Back to Dashboard</a>
+     <section class="container card">
+        <div class="find-resource-container">
+            <div class="left-side">
+                <h1>Find a Resource</h1>
+                <h3>Search for a resource</h3>
+                <input type="text" id="search" name="search" placeholder="Resource name...">
+                <button type="submit" id="searchBtn" class="btn">Search</button>
+                <button type="button" id="resetBtn" class="hidden btn reset">Reset</button>
+            </div>
+        </div>
+
+    </section>
+    <!-- Resource list display -->
+    <section class="container card" id="toggleList">
+        <div class="resource-title">
+            <span class="title-text">Resource List</span>
+            <div class="title-buttons" id="categoryButtons">
+                <button class="title-btn" data-type="All">All</button>
+                <button class="title-btn" data-type="room">Rooms</button>
+                <button class="title-btn" data-type="equipment">Equipment</button>
+                <label class="unavailable-toggle">
+                    <input type="checkbox" id="toggleUnavailable">Show Unavailable</label>
+            </div>
+        </div>
+        <div id="list" class="searchResult"></div>
+    </section>
+        <!-- Search list display -->
+    <section class="container card hidden" id="toggleSearchList">
+        <div class="resource-title">
+            <span class="title-text">Resources found:</span>
+            <div class="title-buttons" id="searchCategoryButtons">
+                <button class="title-btn" data-type="All">All</button>
+                <button class="title-btn" data-type="room">Rooms</button>
+                <button class="title-btn" data-type="equipment">Equipment</button>
+                <label class="unavailable-toggle">
+                    <input type="checkbox" id="toggleSearchUnavailable">Show Unavailable</label>
+            </div>
+        </div>
+        <div id="searchResult" class="searchResult"></div>
+    </section>
+</body>
+</body>
+</html>

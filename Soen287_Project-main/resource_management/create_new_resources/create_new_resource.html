@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Create new resource</title>
+    <link rel="stylesheet" href="../shared_resource.css">
+    <script src="./create_new_resource.js" type="module"></script>
+    <script src="../../adminSafety.js" type="module"></script>
+</head>
+
+<body>
+   <div id="headerBanner">
+        <h1> Campus Resource Management</h1>
+        <span>Concordia University</span>
+    </div>  
+    <a href="../main_page/resource_management.html?currentCategory=All" class="btn-home">Back to Resource Management</a>
+    <section class="container card">
+        <h1>Create new resource</h1>
+        <h3>Attributes of the new resource below</h3>
+        <form class="form-container" onsubmit="createResourceOnSubmit(event)">
+            <!-- NAME  -->
+            <div>
+                <label for="name">Name of new resource:</label>
+                <input type="text" id="name" name="name" placeholder="e.g. 3D printer, CS lab ">
+            </div>
+            <!-- TYPE --> 
+            <div>
+                <label for="myDropdown">Type:</label>
+                <select id="type" name="myDropdown" onchange="handleType(event)">
+                    <option value="">Select</option>
+                    <option value="room">Room</option>
+                    <option value="equipment">Equipment</option>
+                </select>
+            </div>
+            <!-- DESCRIPTION -->
+            <div>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <!-- LOCATION -->
+            <div>
+                <label for="location">Location (or where it could be found):</label>
+                <input type="location" id="location" name="location" placeholder="e.g. Hall 101.00">
+            </div>
+            <!-- CAPACITIES -->
+            <div id="roomField" style="display:none;">
+                <label for="capacities">Room capacity:</label>
+                <input type="text" id="capacity" name="capacity" placeholder="e.g. 22 people">
+            </div>
+            <!-- AVAILABILITY -->
+            <div>
+            <label for="myDropdown">Availability:</label>
+                <select id="availability" name="myDropdown">
+                    <option value="">Select</option>
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+            </div>
+            <!-- IMAGES -->
+            <div>
+                <label for="image">Upload image file:</label>
+                <input type="url" id="image" name="image" placeholder="Enter image URL">
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <input type="submit" class="btn"/>
+        </form>
+    </section>
+
+</body>
+
+</html>
